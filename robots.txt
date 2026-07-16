@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lekati.kmtrend.com/sitemap.xml
