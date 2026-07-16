@@ -30,6 +30,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Roboto:wght@500;700;900&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css?v=20260716-2">
   <link rel="stylesheet" href="assets/css/contact-buttons.css?v=20260716-1">
+  <!-- Logo đầu trang: thay ảnh tại assets/images/lekati-logo.png -->
+  <style>
+    .site-header .brand {
+      line-height: 0;
+    }
+    .site-header .brand-logo {
+      display: block;
+      width: 118px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    @media (max-width: 600px) {
+      .site-header .brand-logo {
+        width: 108px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -39,12 +57,12 @@
   <div class="progress" id="progress"></div>
   <header class="site-header" id="top">
     <div class="container nav-wrap">
+      <!-- LOGO ĐẦU TRANG: chỉ cần thay file assets/images/lekati-logo.png -->
       <a class="brand" href="#top" aria-label="Le'Kati Success">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span><b>Le'Kati</b><small>SUCCESS</small></span>
+        <img class="brand-logo" src="assets/images/lekati-logo.png" alt="Le'Kati Success">
       </a>
       <nav class="desktop-nav" aria-label="Điều hướng chính">
-        <a href="#loi-ich">Lợi ích</a><a href="#noi-dung">Nội dung</a><a href="#feedback">Kết quả</a><a href="#giang-vien">Giảng viên</a>
+        <a href="#loi-ich">LỢI ÍCH</a><a href="#noi-dung">NỘI DUNG</a><a href="#feedback">KẾT QUẢ</a><a href="#giang-vien">GIẢNG VIÊN</a>
       </nav>
       <a class="btn btn-sm" href="#dang-ky">Nhận tư vấn</a>
     </div>
