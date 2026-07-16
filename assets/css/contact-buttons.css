@@ -1,7 +1,3 @@
-/* =========================================================
-   BỘ 3 NÚT LIÊN HỆ: GỌI – ZALO – MESSENGER
-   Chỉ chứa giao diện + hiệu ứng, không cần JavaScript.
-   ========================================================= */
 
 .km-floating-contact {
   position: fixed;
@@ -36,7 +32,6 @@
   pointer-events: none;
 }
 
-/* Vòng sóng lan ra */
 .km-contact-fab::before {
   inset: 4px;
   border: 2px solid currentColor;
@@ -44,7 +39,6 @@
   animation: kmFabRipple 2.4s ease-out infinite;
 }
 
-/* Vòng nền mờ bên ngoài */
 .km-contact-fab::after {
   inset: -7px;
   background: currentColor;
@@ -81,7 +75,6 @@
   object-fit: contain;
 }
 
-/* Nút gọi */
 .km-fab-phone { color: #22bd67; }
 .km-fab-phone .km-fab-core {
   background: linear-gradient(145deg, #2fce78, #13a958);
@@ -93,7 +86,6 @@
   animation: kmContactShake 5.2s ease-in-out infinite;
 }
 
-/* Nút Zalo */
 .km-fab-zalo { color: #0878ff; }
 .km-fab-zalo .km-fab-core {
   background: #fff;
@@ -105,7 +97,6 @@
   animation: kmContactShake 5.2s ease-in-out .65s infinite;
 }
 
-/* Nút Messenger */
 .km-fab-messenger { color: #7055ff; }
 .km-fab-messenger .km-fab-core {
   background: #fff;
@@ -117,7 +108,6 @@
   animation: kmContactShake 5.2s ease-in-out 1.3s infinite;
 }
 
-/* Chữ hiện khi rê chuột trên máy tính */
 .km-fab-tooltip {
   position: absolute;
   right: 68px;
