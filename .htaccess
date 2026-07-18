@@ -1,0 +1,8 @@
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|webp)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
