@@ -1,3 +1,7 @@
+/* =========================================================
+   BỘ 3 NÚT LIÊN HỆ: GỌI – ZALO – MESSENGER
+   Chỉ chứa giao diện + hiệu ứng, không cần JavaScript.
+   ========================================================= */
 
 .km-floating-contact {
   position: fixed;
@@ -32,6 +36,7 @@
   pointer-events: none;
 }
 
+/* Vòng sóng lan ra */
 .km-contact-fab::before {
   inset: 4px;
   border: 2px solid currentColor;
@@ -39,6 +44,7 @@
   animation: kmFabRipple 2.4s ease-out infinite;
 }
 
+/* Vòng nền mờ bên ngoài */
 .km-contact-fab::after {
   inset: -7px;
   background: currentColor;
@@ -75,6 +81,7 @@
   object-fit: contain;
 }
 
+/* Nút gọi */
 .km-fab-phone { color: #22bd67; }
 .km-fab-phone .km-fab-core {
   background: linear-gradient(145deg, #2fce78, #13a958);
@@ -86,6 +93,7 @@
   animation: kmContactShake 5.2s ease-in-out infinite;
 }
 
+/* Nút Zalo */
 .km-fab-zalo { color: #0878ff; }
 .km-fab-zalo .km-fab-core {
   background: #fff;
@@ -97,6 +105,7 @@
   animation: kmContactShake 5.2s ease-in-out .65s infinite;
 }
 
+/* Nút Messenger */
 .km-fab-messenger { color: #7055ff; }
 .km-fab-messenger .km-fab-core {
   background: #fff;
@@ -108,6 +117,7 @@
   animation: kmContactShake 5.2s ease-in-out 1.3s infinite;
 }
 
+/* Chữ hiện khi rê chuột trên máy tính */
 .km-fab-tooltip {
   position: absolute;
   right: 68px;
@@ -188,5 +198,94 @@
   .km-contact-fab::before,
   .km-fab-icon {
     animation: none !important;
+  }
+}
+
+
+/* =========================================================
+   NÚT VỀ ĐẦU TRANG + NÂNG CỤM NÚT TRÊN MOBILE
+   ========================================================= */
+.km-fab-top {
+  color: #0f766e;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px) scale(.92);
+  transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+  animation: none;
+}
+
+.km-fab-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.km-fab-top .km-fab-core {
+  background: linear-gradient(145deg, #ffffff, #eafaf7);
+  border: 2px solid #159b8c;
+  box-shadow: 0 10px 25px rgba(15, 118, 110, .22);
+}
+
+.km-fab-top .km-fab-icon {
+  width: 25px;
+  height: 25px;
+  color: #0f766e;
+}
+
+.km-fab-top .km-fab-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.km-fab-top:hover .km-fab-core,
+.km-fab-top:focus-visible .km-fab-core {
+  background: linear-gradient(145deg, #20b8a5, #0f766e);
+}
+
+.km-fab-top:hover .km-fab-icon,
+.km-fab-top:focus-visible .km-fab-icon {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .km-floating-contact {
+    /* Chừa đáy màn hình để không che footer và tránh thanh điều hướng điện thoại. */
+    bottom: calc(76px + env(safe-area-inset-bottom));
+    gap: 8px;
+  }
+
+  .km-fab-top {
+    width: 48px;
+    height: 48px;
+  }
+
+  .km-fab-top .km-fab-core {
+    width: 42px;
+    height: 42px;
+  }
+
+  .km-fab-top .km-fab-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 380px), (max-height: 720px) and (max-width: 600px) {
+  .km-floating-contact {
+    bottom: calc(62px + env(safe-area-inset-bottom));
+    gap: 6px;
+  }
+
+  .km-contact-fab {
+    width: 48px;
+    height: 48px;
+  }
+
+  .km-fab-core {
+    width: 42px;
+    height: 42px;
   }
 }
